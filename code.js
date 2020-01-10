@@ -5,8 +5,6 @@ var json = JSON.parse(content);
 console.log("\n  B2C Login Activity from JSON File  \n")
 console.log("Total Login Attempts (Success or Failure) counted in JSON file:" + json.length + "\n");
 var dates = [];
-var logins = [];
-var uniqueUsers = [];
 var successLogins = [];
 
 //gets dates in file
@@ -20,7 +18,7 @@ for (var i = 0; i < json.length; i++) {
 
 console.log("Dates Available in JSON file: " + dates + "\n");
 
-//initialize totalLogins and success to the correct amounts of entries
+//initialize totalLogins and success arrays to the correct amounts of entries
 totalLogins = [];
 for (var i = 0; i < dates.length; i++) {
     totalLogins[i] = 0;
